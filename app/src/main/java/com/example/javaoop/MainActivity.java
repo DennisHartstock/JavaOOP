@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         Constructors thirdConstructor = new Constructors(1, 2, 3);
         thirdConstructor.sum();
-    }
 
+        Human oldStudent = new Student();
+        oldStudent.talk();
+    }
 }
