@@ -1,11 +1,13 @@
 package com.example.javaoop;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.MessageFormat;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     TextView textView;
@@ -34,5 +36,26 @@ public class MainActivity extends AppCompatActivity {
 
         Human oldStudent = new Student();
         oldStudent.talk();
+
+        ArrayList<Children> children = new ArrayList<>();
+
+        Son ivan = new Son();
+        Son peter = new Son();
+        Daughter masha = new Daughter();
+        Daughter dasha = new Daughter();
+
+        children.add(ivan);
+        children.add(peter);
+        children.add(masha);
+        children.add(dasha);
+
+        for (Children child : children) {
+            if (child instanceof Son)
+                Log.i("instance", "Son");
+            if (child instanceof Daughter)
+                Log.i("instance", "Daughter");
+        }
+
+        Log.i("instance", "children.size: " + children.size());
     }
 }
