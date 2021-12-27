@@ -56,6 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("instance", "Daughter");
         }
 
-        Log.i("instance", "children.size: " + children.size());
+        Log.i("instance", "Count of children: " + Children.count);
     }
 }
