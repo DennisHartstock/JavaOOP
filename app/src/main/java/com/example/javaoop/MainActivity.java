@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<Children> children = new ArrayList<>();
 
-        Son ivan = new Son();
-        Son peter = new Son();
-        Daughter masha = new Daughter();
-        Daughter dasha = new Daughter();
+        Son ivan = new Son(1);
+        Son peter = new Son(2);
+        Daughter masha = new Daughter(3);
+        Daughter dasha = new Daughter(0);
 
         children.add(ivan);
         children.add(peter);
@@ -51,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
         for (Children child : children) {
             if (child instanceof Son)
-                Log.i("instance", "Son");
+                Log.i("instance", "Son" + ", " + child.childText);
             if (child instanceof Daughter)
-                Log.i("instance", "Daughter");
+                Log.i("instance", "Daughter" + ", " + child.childText);
         }
 
         Log.i("instance", "Count of children: " + Children.count);
