@@ -57,5 +57,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Log.i("instance", "Count of children: " + Children.count);
+
+        Student youngStudent = new Student(){
+            @Override
+            public void talk() {
+                Log.i("text", "I´m a young student");
+            }
+        };
+
+        youngStudent.talk();
     }
 }
