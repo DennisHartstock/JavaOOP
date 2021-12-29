@@ -2,7 +2,7 @@ package com.example.javaoop;
 
 import android.util.Log;
 
-public class Student extends Human {
+public abstract class Student extends Human {
 
     boolean canPlayGuitar;
     private String studentHelloText;
@@ -36,4 +36,6 @@ public class Student extends Human {
             return "I can play guitar";
         else return "";
     }
+
+    public abstract void writeExam();
 }

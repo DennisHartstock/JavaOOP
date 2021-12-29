@@ -18,7 +18,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.textView);
 
-        Student dennis = new Student("Dennis");
+        Student dennis = new Student("Dennis") {
+            @Override
+            public void writeExam() {
+            }
+        };
         dennis.age = 45;
         dennis.canPlayGuitar = true;
 
@@ -34,7 +38,11 @@ public class MainActivity extends AppCompatActivity {
         Constructors thirdConstructor = new Constructors(1, 2, 3);
         thirdConstructor.sum();
 
-        Human oldStudent = new Student();
+        Human oldStudent = new Student() {
+            @Override
+            public void writeExam() {
+            }
+        };
         oldStudent.talk();
 
         ArrayList<Children> children = new ArrayList<>();
@@ -58,13 +66,21 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i("instance", "Count of children: " + Children.count);
 
-        Student youngStudent = new Student(){
+        Student youngStudent = new Student() {
             @Override
             public void talk() {
                 Log.i("text", "I´m a young student");
             }
+
+            @Override
+            public void writeExam() {
+                Log.i("exam", "I write an exam");
+            }
         };
 
         youngStudent.talk();
+        youngStudent.writeExam();
+        youngStudent.learn();
+        youngStudent.haveIntellect();
     }
 }
